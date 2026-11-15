@@ -3,93 +3,585 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manvi Singh - Resume & Portfolio</title>
+    <title>Manvi Singh | Resume & Portfolio</title>
+    
+    <!-- Google Fonts for Modern Readability -->
+    <link rel="preconnect" href="[suspicious link removed]">
+    <link rel="preconnect" href="[suspicious link removed]" crossorigin>
+    <link href="[suspicious link removed]" rel="stylesheet">
+
+    <style>
+        /* Global CSS Variables */
+        :root {
+            --primary: #1b3b2b;        /* Deep Forest Green */
+            --primary-light: #2d5a42;  /* Medium Emerald Green */
+            --accent: #4a7c59;         /* Sage Green */
+            --gold: #d4af37;           /* Warm Gold Accent */
+            --tagline-color: #3b7a57;   /* Distinct Agribusiness Green */
+            --bg: #f8faf7;             /* Soft Off-White Background */
+            --card-bg: #ffffff;        /* Crisp White */
+            --text-dark: #212529;      /* Charcoal Body Text */
+            --text-muted: #5a655d;     /* Muted Text */
+            --border: #e2e8e4;         /* Soft Border */
+            --shadow: 0 4px 14px rgba(27, 59, 43, 0.08);
+            --shadow-hover: 0 8px 24px rgba(27, 59, 43, 0.14);
+        }
+
+        /* Resets & Base Formatting */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* 1. Sticky Navigation Menu Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(27, 59, 43, 0.96);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+        }
+
+        .nav-links a {
+            color: #e2e8e4;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Header Area */
+        header {
+            background: linear-gradient(135deg, #132a1f 0%, #1b3b2b 60%, #294d38 100%);
+            color: #ffffff;
+            padding: 4.5rem 1.5rem 4rem;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.4rem;
+        }
+
+        .subheading {
+            font-size: 1.35rem;
+            color: #e2e8e4;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: #a3d9b1; /* Distinct Color for Tagline */
+            font-weight: 500;
+            max-width: 720px;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Hero Action Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.85rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: #132a1f;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #e6c148;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Cartoon Graphic (Inline SVG) */
+        .hero-graphic {
+            width: 170px;
+            height: 170px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 3px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero-graphic svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.4rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 55px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* General Card Box Styling */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.4rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-header-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .institution-tag {
+            display: inline-block;
+            background-color: #eaf2eb;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-top: 0.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .score-badge {
+            font-weight: 700;
+            color: var(--primary);
+            background-color: #f0f7f2;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layouts for Skills & Exploration */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .skill-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 10px;
+            padding: 1.4rem;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-box h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .skill-list {
+            color: var(--text-muted);
+            font-size: 0.93rem;
+            line-height: 1.5;
+        }
+
+        /* Simple Bullet Lists */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .styled-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            font-size: 0.98rem;
+        }
+
+        .styled-list li::before {
+            content: '🌱';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.85rem;
+        }
+
+        /* Areas of Exploration Cards */
+        .exploration-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+        }
+
+        .exploration-card h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exploration-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer / Contact Styling */
+        footer {
+            background-color: var(--primary);
+            color: #ffffff;
+            text-align: center;
+            padding: 3.5rem 1.5rem 2.5rem;
+            margin-top: 4rem;
+        }
+
+        footer h2 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            color: #d1e0d5;
+            margin-bottom: 0.7rem;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.85;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #8fae98;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 1.5rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+            .subheading {
+                font-size: 1.1rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            main {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- 1. Sticky Navigation Menu Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Manvi Singh</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#experience">Internships</a></li>
+                <li><a href="#exploration">Exploration</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header Area -->
     <header>
-        <h1>Manvi Singh</h1> 
-        <p>Aspiring agriculture entrepreneur and enthusiast</p>
+        <div class="hero-container">
+            <h1>Manvi Singh</h1>
+            <div class="subheading">BBA Digital Business and Entrepreneurship, IIM Bangalore</div>
+            <p class="hero-tagline">An aspiring agribusiness undergraduate eager to bridge business and agriculture through innovative, sustainable, and market-driven solutions.</p>
+            
+            <!-- Hero Action Buttons -->
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                <a href="#about" class="btn btn-secondary">Explore Profile</a>
+            </div>
+
+            <!-- Agribusiness Cartoon Vector Graphic -->
+            <div class="hero-graphic" title="Agribusiness & Student Entrepreneur Graphic">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="[suspicious link removed]">
+                    <!-- Sprout / Plant -->
+                    <path d="M50 65V35" stroke="#a3d9b1" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M50 45C40 38 30 42 28 50C38 52 48 48 50 45Z" fill="#d4af37"/>
+                    <path d="M50 40C60 33 70 37 72 45C62 47 52 43 50 40Z" fill="#a3d9b1"/>
+                    <!-- Female Avatar Base -->
+                    <circle cx="50" cy="22" r="10" fill="#ffffff"/>
+                    <path d="M35 32C35 25 65 25 65 32" stroke="#ffffff" stroke-width="3"/>
+                    <!-- Pot / Soil Shield -->
+                    <path d="M35 65L40 85H60L65 65H35Z" fill="#d4af37"/>
+                </svg>
+            </div>
+        </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content Body -->
     <main>
-        
-        <!-- About Me Section -->
-        <section> 
-            <h2>About Me</h2>  
-            <p>An aspiring agribusiness undergraduate eager to bridge business and agriculture through innovative, sustainable, and market-driven solutions.</p> 
+
+        <!-- 01 - About Me Section -->
+        <section id="about">
+            <h2 class="section-title">01- About Me</h2>
+            <div class="card">
+                <p>I am a B.Sc. Agriculture and BBA (Digital Business & Entrepreneurship) student with a keen interest in entrepreneurship, marketing, and business strategy. I aspire to build an e-commerce brand in the agricultural sector, with a particular focus on hydroponics and horticulture. Passionate about exploring the intersection of agriculture, technology, and digital business, I aim to create innovative, scalable, and market-driven solutions that make modern agriculture more accessible and commercially viable.</p>
+            </div>
         </section>
 
-        <!-- Current Education Section -->
-        <section> 
-            <h2>Current Education</h2> 
+        <!-- 02 - Education Section -->
+        <section id="education">
+            <h2 class="section-title">02- Education</h2>
+
+            <!-- Higher Education / Colleges -->
+            <article class="card">
+                <div class="card-header-title">Bachelor of Business Administration (Digital Business & Entrepreneurship)</div>
+                <span class="institution-tag">Indian Institute of Management, Bangalore</span>
+            </article>
+
+            <article class="card">
+                <div class="card-header-title">Bachelor of Science in Agriculture</div>
+                <span class="institution-tag">Sam Higginbottom University of Agriculture and Technology</span>
+            </article>
+
+            <!-- Schooling Subsections -->
+            <article class="card">
+                <div class="card-header-title">ISC (Class XII)</div>
+                <p><strong>Grade/Percentage:</strong> <span class="score-badge">95.25%</span></p>
+                <span class="institution-tag">Gurukul Academy</span>
+            </article>
+
+            <article class="card">
+                <div class="card-header-title">ICSE (Class X)</div>
+                <p><strong>Grade/Percentage:</strong> <span class="score-badge">96.8%</span></p>
+                <span class="institution-tag">Gurukul Academy</span>
+            </article>
+        </section>
+
+        <!-- 03 - Skills I Hone Section -->
+        <section id="skills">
+            <h2 class="section-title">03- Skills I Hone</h2>
+            <div class="grid-2">
+                
+                <div class="skill-box">
+                    <h4>1. Business & Entrepreneurship</h4>
+                    <p class="skill-list">Strategy · Business Development · Market Research · Entrepreneurship</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>2. Agribusiness</h4>
+                    <p class="skill-list">Crop Production · Hydroponics · Horticulture · Sustainable Agriculture</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>3. Marketing & Strategy</h4>
+                    <p class="skill-list">Data Analysis · Market Research · Competitor Analysis · Problem-Solving</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>4. Interpersonal Skills</h4>
+                    <p class="skill-list">Communication & Public Speaking · Adaptability · Decision-Making · Initiative & Ownership</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 04 - Certifications Section -->
+        <section id="certifications">
+            <h2 class="section-title">04- Certifications</h2>
+            <div class="card">
+                <ul class="styled-list">
+                    <li>Google Shopping Ads Certification (2025)</li>
+                    <li>Campaign Manager 360 Certification Exam (2025)</li>
+                    <li>Alison Marketing Management Course (2025)</li>
+                    <li>IIDE Mastercourse on Digital Marketing Fundamentals</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 05 - Internships and Achievements Section -->
+        <section id="experience">
+            <h2 class="section-title">05- Internships & Achievements</h2>
             
-            <article>
-                <h3>Bachelor of Science in Agriculture</h3>
-                <p><strong>Institution:</strong> Sam Higginbottom University of Agriculture and Technology (Cohort 2030)</p>
-            </article> 
-
-            <article>
-                <h3>Bachelor of Business Administration (Digital Business and Entrepreneurship)</h3>
-                <p><strong>Institution:</strong> Indian Institute of Management, Bangalore (Cohort 2029)</p>
-            </article> 
-
-            <article> 
-                <h3>Intermediate (ISC)</h3>
-                <p><strong>Institution:</strong> Gurukul Academy</p> 
-                <p><strong>Year of Completion:</strong> 2025</p> 
-                <p><strong>Grade/Percentage:</strong> 95.25%</p> 
+            <article class="card">
+                <div class="card-header-title">MUSKURAHAT FOUNDATION</div>
+                <p><strong>Role:</strong> Crowdfunding Intern</p>
+                <p class="institution-tag">July – August 2025</p>
             </article>
 
-            <article> 
-                <h3>High School (ICSE)</h3>
-                <p><strong>Institution:</strong> Gurukul Academy</p> 
-                <p><strong>Year of Completion:</strong> 2023</p> 
-                <p><strong>Grade/Percentage:</strong> 96.8%</p> 
+            <article class="card">
+                <div class="card-header-title">CLASSMATE ALL ROUNDER'S EVENT</div>
+                <p><strong>Achievement:</strong> City Winner & National Finalist</p>
             </article>
         </section>
 
-        <!-- Skills and Certifications Section -->
-        <section> 
-            <h2>Skills and Certifications</h2> 
-            <table border="1">
-                <thead> 
-                    <tr> 
-                        <th>Skill / Certification</th>
-                        <th>Proficiency / Year</th>
-                    </tr>
-                </thead>
-                <tbody> 
-                    <tr> 
-                        <td>Google Ads Certification</td>
-                        <td>Intermediate (2025)</td> 
-                    </tr>
-                    <tr> 
-                        <td>Google Campaign Manager 360</td>
-                        <td>Intermediate (2025)</td> 
-                    </tr> 
-                    <tr> 
-                        <td>Canva</td> 
-                        <td>Intermediate (2023)</td> 
-                    </tr>
-                    <tr> 
-                        <td>CapCut</td> 
-                        <td>Intermediate (2024)</td> 
-                    </tr> 
-                </tbody> 
-            </table> 
+        <!-- 06 - Areas of Exploration Section -->
+        <section id="exploration">
+            <h2 class="section-title">Areas of Exploration</h2>
+
+            <div class="exploration-card">
+                <h4>01. Agribusiness & Innovation</h4>
+                <p>Exploring innovative business opportunities at the intersection of agriculture, technology, and sustainability.</p>
+            </div>
+
+            <div class="exploration-card">
+                <h4>02. Hydroponics & Horticulture</h4>
+                <p>Understanding modern cultivation systems, horticultural ventures, and the future of soilless farming.</p>
+            </div>
+
+            <div class="exploration-card">
+                <h4>03. Entrepreneurship & E-commerce</h4>
+                <p>Exploring digital business models, startup ecosystems, and scalable agri-commerce opportunities.</p>
+            </div>
+
+            <div class="exploration-card">
+                <h4>04. Marketing & Business Strategy</h4>
+                <p>Learning to build impactful brands through market research, consumer insights, and strategic positioning.</p>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer Section -->
-    <footer> 
+    <!-- Footer / Contact Details Section -->
+    <footer id="contact">
         <h2>Contact Details</h2>
         <p>Email: <a href="mailto:clubae10@gmail.com">clubae10@gmail.com</a></p>
-        <p>LinkedIn: <a href="[suspicious link removed]" target="_blank">Visit LinkedIn Profile</a></p> 
-        <p>&copy; 2026 Manvi Singh. All rights reserved.</p> 
+        <p>LinkedIn: <a href="[suspicious link removed]" target="_blank" rel="noopener noreferrer">Visit LinkedIn Profile</a></p>
+        <p class="copyright">&copy; 2026 Manvi Singh. All rights reserved.</p>
     </footer>
 
 </body>
