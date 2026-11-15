@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manvi Singh | Resume & Portfolio</title>
+    <title>Manvi Singh | Agribusiness & Digital Entrepreneurship</title>
     
-    <!-- Google Fonts for Modern Readability -->
+    <!-- Modern Google Fonts: Playfair Display (Luxury Serif) + Outfit (Clean Sans-Serif) -->
     <link rel="preconnect" href="[suspicious link removed]">
     <link rel="preconnect" href="[suspicious link removed]" crossorigin>
     <link href="[suspicious link removed]" rel="stylesheet">
 
     <style>
-        /* Global CSS Variables */
+        /* New Aesthetic Color Palette Variables */
         :root {
-            --primary: #1b3b2b;        /* Deep Forest Green */
-            --primary-light: #2d5a42;  /* Medium Emerald Green */
-            --accent: #4a7c59;         /* Sage Green */
-            --gold: #d4af37;           /* Warm Gold Accent */
-            --tagline-color: #3b7a57;   /* Distinct Agribusiness Green */
-            --bg: #f8faf7;             /* Soft Off-White Background */
-            --card-bg: #ffffff;        /* Crisp White */
-            --text-dark: #212529;      /* Charcoal Body Text */
-            --text-muted: #5a655d;     /* Muted Text */
-            --border: #e2e8e4;         /* Soft Border */
-            --shadow: 0 4px 14px rgba(27, 59, 43, 0.08);
-            --shadow-hover: 0 8px 24px rgba(27, 59, 43, 0.14);
+            --primary: #0f2e23;          /* Deep Midnight Emerald */
+            --primary-soft: #194334;     /* Medium Soft Jade */
+            --accent-terracotta: #d97757;/* Warm Terracotta Accent */
+            --gold-accent: #e5ba65;      /* Champagne Gold */
+            --bg-linen: #faf8f5;         /* Soft Warm Linen Background */
+            --card-bg: #ffffff;          /* Pure Crisp White */
+            --text-main: #1c2420;        /* Deep Charcoal Text */
+            --text-subtle: #57635b;      /* Muted Warm Slate */
+            --border-soft: #eae5dc;      /* Warm Delicate Border */
+            --shadow-subtle: 0 10px 30px rgba(15, 46, 35, 0.05);
+            --shadow-hover: 0 15px 35px rgba(15, 46, 35, 0.12);
         }
 
-        /* Resets & Base Formatting */
+        /* Reset & Base Setup */
         * {
             margin: 0;
             padding: 0;
@@ -39,25 +38,25 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-dark);
-            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-linen);
+            color: var(--text-main);
+            line-height: 1.65;
         }
 
-        /* 1. Sticky Navigation Menu Bar */
+        /* 1. Glassmorphism Sticky Navigation Bar */
         nav {
             position: sticky;
             top: 0;
-            background-color: rgba(27, 59, 43, 0.96);
-            backdrop-filter: blur(10px);
+            background-color: rgba(15, 46, 35, 0.95);
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+            padding: 1.1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1050px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -66,7 +65,7 @@
 
         .nav-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
+            font-size: 1.45rem;
             color: #ffffff;
             font-weight: 700;
             text-decoration: none;
@@ -80,28 +79,29 @@
         }
 
         .nav-links a {
-            color: #e2e8e4;
+            color: #e3ebe6;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.92rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--gold);
+            color: var(--gold-accent);
         }
 
-        /* Hero Header Area */
+        /* Hero Header Section */
         header {
-            background: linear-gradient(135deg, #132a1f 0%, #1b3b2b 60%, #294d38 100%);
+            background: linear-gradient(145deg, #0a2119 0%, #0f2e23 55%, #194334 100%);
             color: #ffffff;
-            padding: 4.5rem 1.5rem 4rem;
+            padding: 5rem 1.5rem 4.5rem;
             text-align: center;
-            border-bottom: 4px solid var(--gold);
+            border-bottom: 4px solid var(--accent-terracotta);
+            position: relative;
         }
 
         .hero-container {
-            max-width: 900px;
+            max-width: 880px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -110,29 +110,31 @@
 
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
             margin-bottom: 0.4rem;
+            letter-spacing: 0.5px;
         }
 
         .subheading {
-            font-size: 1.35rem;
-            color: #e2e8e4;
+            font-size: 1.25rem;
+            color: #e5eedb;
             font-weight: 600;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.3px;
         }
 
+        /* Tagline with Distinct Warm Terracotta Color */
         .hero-tagline {
-            font-size: 1.1rem;
-            color: #a3d9b1; /* Distinct Color for Tagline */
-            font-weight: 500;
-            max-width: 720px;
-            margin-bottom: 2rem;
-            line-height: 1.5;
+            font-size: 1.12rem;
+            color: #f2ab94; /* Distinct Terracotta Warm Accent */
+            font-weight: 400;
+            max-width: 730px;
+            margin-bottom: 2.2rem;
+            line-height: 1.6;
         }
 
-        /* Hero Action Buttons */
+        /* Action Buttons */
         .btn-group {
             display: flex;
             gap: 1.2rem;
@@ -142,7 +144,7 @@
         }
 
         .btn {
-            padding: 0.85rem 1.8rem;
+            padding: 0.85rem 2rem;
             border-radius: 30px;
             font-weight: 600;
             font-size: 0.95rem;
@@ -152,40 +154,39 @@
         }
 
         .btn-primary {
-            background-color: var(--gold);
-            color: #132a1f;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            background-color: var(--accent-terracotta);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(217, 119, 87, 0.35);
         }
 
         .btn-primary:hover {
-            background-color: #e6c148;
-            transform: translateY(-2px);
+            background-color: #c46445;
+            transform: translateY(-3px);
         }
 
         .btn-secondary {
             background-color: transparent;
             color: #ffffff;
-            border: 2px solid #ffffff;
+            border: 2px solid var(--gold-accent);
         }
 
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
+            background-color: rgba(229, 186, 101, 0.15);
+            transform: translateY(-3px);
         }
 
-        /* Hero Cartoon Graphic (Inline SVG) */
+        /* Vector Graphic Badge */
         .hero-graphic {
-            width: 170px;
-            height: 170px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 3px solid rgba(212, 175, 55, 0.5);
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(229, 186, 101, 0.4);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
-            margin-top: 0.5rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            padding: 1.2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
         .hero-graphic svg {
@@ -193,25 +194,25 @@
             height: 100%;
         }
 
-        /* Main Content Styling */
+        /* Main Container Setup */
         main {
-            max-width: 950px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 3.5rem 1.5rem;
+            padding: 4rem 1.5rem;
         }
 
         section {
-            margin-bottom: 3.5rem;
+            margin-bottom: 3.8rem;
         }
 
-        /* Section Titles */
+        /* Section Titles with Accent Underline */
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.85rem;
+            font-size: 1.9rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.6rem;
             position: relative;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
         }
 
         .section-title::after {
@@ -219,52 +220,52 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 55px;
+            width: 50px;
             height: 3px;
-            background-color: var(--accent);
+            background-color: var(--accent-terracotta);
             border-radius: 2px;
         }
 
-        /* General Card Box Styling */
+        /* Card Component Formatting */
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.8rem;
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 1.9rem;
             margin-bottom: 1.4rem;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
         }
 
         .card-header-title {
-            font-size: 1.2rem;
+            font-size: 1.22rem;
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.35rem;
         }
 
         .institution-tag {
             display: inline-block;
-            background-color: #eaf2eb;
-            color: var(--accent);
+            background-color: #f2ebe3;
+            color: #8c4731;
             font-weight: 600;
             font-size: 0.85rem;
-            padding: 0.25rem 0.75rem;
+            padding: 0.25rem 0.8rem;
             border-radius: 20px;
-            margin-top: 0.3rem;
-            margin-bottom: 0.6rem;
+            margin-top: 0.4rem;
+            margin-bottom: 0.5rem;
         }
 
         .score-badge {
             font-weight: 700;
             color: var(--primary);
-            background-color: #f0f7f2;
-            padding: 0.2rem 0.6rem;
+            background-color: #eaf2ed;
+            padding: 0.2rem 0.65rem;
             border-radius: 6px;
             font-size: 0.9rem;
         }
@@ -273,31 +274,37 @@
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
+            gap: 1.3rem;
         }
 
         .skill-box {
             background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--accent);
-            border-radius: 10px;
-            padding: 1.4rem;
-            box-shadow: var(--shadow);
+            border: 1px solid var(--border-soft);
+            border-left: 4px solid var(--primary-soft);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-3px);
         }
 
         .skill-box h4 {
             color: var(--primary);
-            font-size: 1.05rem;
+            font-size: 1.08rem;
             margin-bottom: 0.6rem;
+            font-weight: 600;
         }
 
         .skill-list {
-            color: var(--text-muted);
-            font-size: 0.93rem;
-            line-height: 1.5;
+            color: var(--text-subtle);
+            font-size: 0.94rem;
+            line-height: 1.55;
         }
 
-        /* Simple Bullet Lists */
+        /* Bulleted List Styling */
         .styled-list {
             list-style: none;
             padding: 0;
@@ -305,48 +312,53 @@
 
         .styled-list li {
             position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-dark);
+            padding-left: 1.6rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-main);
             font-size: 0.98rem;
         }
 
         .styled-list li::before {
-            content: '🌱';
+            content: '🌿';
             position: absolute;
             left: 0;
             top: 2px;
             font-size: 0.85rem;
         }
 
-        /* Areas of Exploration Cards */
+        /* Exploration Section Cards */
         .exploration-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-soft);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.6rem;
             margin-bottom: 1.2rem;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-subtle);
+            border-left: 5px solid var(--accent-terracotta);
+            transition: transform 0.3s ease;
+        }
+
+        .exploration-card:hover {
+            transform: translateY(-3px);
         }
 
         .exploration-card h4 {
             color: var(--primary);
             font-size: 1.15rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .exploration-card p {
-            color: var(--text-muted);
+            color: var(--text-subtle);
             font-size: 0.95rem;
         }
 
-        /* Footer / Contact Styling */
+        /* Footer & Contact Section */
         footer {
             background-color: var(--primary);
             color: #ffffff;
             text-align: center;
-            padding: 3.5rem 1.5rem 2.5rem;
+            padding: 4rem 1.5rem 2.5rem;
             margin-top: 4rem;
         }
 
@@ -354,17 +366,17 @@
             font-family: 'Playfair Display', serif;
             color: #ffffff;
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.1rem;
         }
 
         footer p {
-            color: #d1e0d5;
-            margin-bottom: 0.7rem;
+            color: #d8e5dd;
+            margin-bottom: 0.8rem;
             font-size: 1rem;
         }
 
         footer a {
-            color: var(--gold);
+            color: var(--gold-accent);
             text-decoration: none;
             font-weight: 600;
             transition: opacity 0.3s ease;
@@ -376,37 +388,37 @@
         }
 
         .copyright {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             font-size: 0.85rem;
-            color: #8fae98;
+            color: #8fa699;
             border-top: 1px solid rgba(255,255,255,0.12);
-            padding-top: 1.5rem;
+            padding-top: 1.6rem;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile Breakpoint Adjustments */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.4rem;
+                font-size: 2.3rem;
             }
             .subheading {
-                font-size: 1.1rem;
+                font-size: 1.08rem;
             }
             .nav-container {
                 flex-direction: column;
                 gap: 0.8rem;
             }
             .nav-links {
-                gap: 1rem;
+                gap: 1.1rem;
             }
             main {
-                padding: 2rem 1rem;
+                padding: 2.5rem 1rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Sticky Navigation Menu Bar -->
+    <!-- 1. Glassmorphism Sticky Navigation Menu Bar -->
     <nav>
         <div class="nav-container">
             <a href="#" class="nav-logo">Manvi Singh</a>
@@ -422,7 +434,7 @@
         </div>
     </nav>
 
-    <!-- Hero Header Area -->
+    <!-- Hero Header Section -->
     <header>
         <div class="hero-container">
             <h1>Manvi Singh</h1>
@@ -435,24 +447,21 @@
                 <a href="#about" class="btn btn-secondary">Explore Profile</a>
             </div>
 
-            <!-- Agribusiness Cartoon Vector Graphic -->
-            <div class="hero-graphic" title="Agribusiness & Student Entrepreneur Graphic">
+            <!-- Agribusiness Vector Graphic -->
+            <div class="hero-graphic" title="Agribusiness Graphic">
                 <svg viewBox="0 0 100 100" fill="none" xmlns="[suspicious link removed]">
-                    <!-- Sprout / Plant -->
-                    <path d="M50 65V35" stroke="#a3d9b1" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M50 45C40 38 30 42 28 50C38 52 48 48 50 45Z" fill="#d4af37"/>
-                    <path d="M50 40C60 33 70 37 72 45C62 47 52 43 50 40Z" fill="#a3d9b1"/>
-                    <!-- Female Avatar Base -->
-                    <circle cx="50" cy="22" r="10" fill="#ffffff"/>
-                    <path d="M35 32C35 25 65 25 65 32" stroke="#ffffff" stroke-width="3"/>
-                    <!-- Pot / Soil Shield -->
-                    <path d="M35 65L40 85H60L65 65H35Z" fill="#d4af37"/>
+                    <path d="M50 68V34" stroke="#e5ba65" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M50 46C38 38 28 42 26 52C38 54 48 49 50 46Z" fill="#d97757"/>
+                    <path d="M50 40C62 32 72 36 74 46C62 48 52 44 50 40Z" fill="#e5ba65"/>
+                    <circle cx="50" cy="20" r="10" fill="#ffffff"/>
+                    <path d="M34 32C34 24 66 24 66 32" stroke="#ffffff" stroke-width="3"/>
+                    <path d="M34 68L39 88H61L66 68H34Z" fill="#d97757"/>
                 </svg>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Body -->
+    <!-- Main Content Area -->
     <main>
 
         <!-- 01 - About Me Section -->
@@ -467,7 +476,7 @@
         <section id="education">
             <h2 class="section-title">02- Education</h2>
 
-            <!-- Higher Education / Colleges -->
+            <!-- Colleges -->
             <article class="card">
                 <div class="card-header-title">Bachelor of Business Administration (Digital Business & Entrepreneurship)</div>
                 <span class="institution-tag">Indian Institute of Management, Bangalore</span>
